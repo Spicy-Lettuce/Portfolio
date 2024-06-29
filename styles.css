@@ -1,0 +1,177 @@
+/* Basic CSS for the portfolio website */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark background */
+    color: #ffd700; /* Yellow text */
+}
+
+/* Navigation Menu Styles */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffd700; /* Yellow text */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+    color: #e6c300; /* Lighter yellow on hover */
+}
+
+/* Home Page Styles */
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px; /* Adjust padding for better layout */
+    background: linear-gradient(to bottom, #333, #000); /* Gradient background */
+    color: #ffd700; /* Yellow text */
+    min-height: 100vh; /* Make sure the section covers the full viewport height */
+    text-align: center; /* Center-align text */
+}
+
+.welcome-text {
+    margin-bottom: 30px; /* Add some space between text and image */
+    animation: fadeIn 2s; /* Simple fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.home-image {
+    width: 400px; /* Larger image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+    animation: bounceIn 1.5s; /* Simple bounce-in animation */
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.intro {
+    margin-top: 20px;
+    font-size: 20px;
+    animation: fadeInUp 2s; /* Simple fade-in-up animation */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Page Styles */
+.about {
+    padding: 50px 100px; /* Increase padding for better layout */
+    background-color: #1a1a1a; /* Dark background */
+    color: #ffd700; /* Yellow text */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center align content */
+}
+
+.profile-photo {
+    margin-right: 40px; /* Increase margin for better spacing */
+    width: 300px; /* Adjusted for better fit */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%;
+}
+
+.about-text {
+    max-width: 800px; /* Increase max width for better text flow */
+    font-size: 18px; /* Increase font size for readability */
+    line-height: 1.6; /* Increase line height for better readability */
+}
+
+/* Contact Page Styles */
+.contact {
+    padding: 50px;
+    background-color: #1a1a1a; /* Dark background */
+    color: #ffd700; /* Yellow text */
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #ffd700;
+    border: 1px solid #ffd700;
+}
+
+form button {
+    background-color: #ffd700;
+    color: #1a1a1a;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #e6c300;
+}
+
+/* Feedback Message Styles */
+.hidden {
+    display: none;
+}
+
+.success {
+    color: #00ff00;
+    margin-top: 20px;
+}
+
+.error {
+    color: #ff0000;
+    margin-top: 20px;
+}

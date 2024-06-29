@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Thank You Page -->
+    <section class="thank-you">
+        <h1>Thank You for Contacting Me!</h1>
+        <p id="userName"></p>
+        <p id="userEmail"></p>
+        <p id="userMessage"></p>
+    </section>
+
+    <script>
+        // Get URL parameters and display
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('userName').textContent = `Name: ${urlParams.get('name')}`;
+        document.getElementById('userEmail').textContent = `Email: ${urlParams.get('email')}`;
+        document.getElementById('userMessage').textContent = `Message: ${urlParams.get('message')}`;
+    </script>
+</body>
+</html>
